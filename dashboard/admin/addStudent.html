@@ -54,94 +54,95 @@
             </div>
 
             <!-- Formulario de add estudiante -->
-            <div class="container-fluid">
+            <div class="container-fluid py-3">
 
                 <form action="">
-                    <div class="tabla-titulo">
+                    <div class="tabla-titulo mb-3">
                         <h5>Datos del Estudiante</h5>
                     </div>
 
-                    <div class="row">
-                        <div class="cont-add">
-                            <div class="foto">
-                                <label for="">Foto*</label>
-                                <div
-                                    class="border border-secondary d-flex flex-column justify-content-center align-items-center p-3 rounded">
-                                    <small>Selecciona un archivo</small>
-                                    <input type="file" class="form-control mt-2" />
-                                </div>
+                    <!-- Primera fila -->
+                    <div class="row g-3">
+                        <!-- Foto -->
+                        <div class="col-md-3">
+                            <label for="">Foto*</label>
+                            <div
+                                class="border border-secondary d-flex flex-column justify-content-center align-items-center p-3 rounded">
+                                <small>Selecciona un archivo</small>
+                                <input type="file" class="form-control mt-2" />
                             </div>
                         </div>
 
-                        <div class="cont-add ">
-                            <div>
+                        <!-- Datos personales -->
+                        <div class="col-md-5">
+                            <div class="mb-3">
                                 <label for="">N° Documento*</label>
-                                <input type="number">
+                                <input type="number" class="form-control">
                             </div>
-                            <div>
+                            <div class="mb-3">
                                 <label for="">Nombres*</label>
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
-                            <div>
+                            <div class="mb-3">
                                 <label for="">Fecha y lugar de nacimiento*</label>
-                                <div class="inpLuFe">
-                                    <input type="date">
-                                    <input type="text">
+                                <div class="d-flex gap-2">
+                                    <input type="date" class="form-control w-50">
+                                    <input type="text" class="form-control w-50" placeholder="Lugar">
                                 </div>
-
                             </div>
-                            <div>
+                            <div class="mb-3">
                                 <label for="">Email*</label>
-                                <input type="email">
+                                <input type="email" class="form-control">
                             </div>
-
                         </div>
-                        <div class="cont-add">
-                            <div class="sw3">
-                                <div>
-                                    <label for="">Apellidos*</label>
-                                    <input type="text">
-                                </div>
-                                <div>
-                                    <label for="">N° Telefono*</label>
-                                    <input type="tel">
-                                </div>
-                            </div>
 
+                        <!-- Apellidos y teléfono -->
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="">Apellidos*</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="">N° Teléfono*</label>
+                                <input type="tel" class="form-control">
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="cont-add">
-                        </div>
 
-                        <div class="cont-add">
-                            <div>
+                    <!-- Segunda fila -->
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-3"></div> 
+
+                        <div class="col-md-4">
+                            <div class="mb-3">
                                 <label for="">Nombre del Acudiente*</label>
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
-                            <div>
+                            <div class="mb-3">
                                 <label for="">Email de Acudiente*</label>
-                                <input type="email">
+                                <input type="email" class="form-control">
                             </div>
                         </div>
-                        <div class="cont-add">
-                            <div>
+
+                        <div class="col-md-4">
+                            <div class="mb-3">
                                 <label for="">Parentesco*</label>
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
-                            <div>
-                                <label for="">N° Telefono Acudiente*</label>
-                                <input type="tel">
+                            <div class="mb-3">
+                                <label for="">N° Teléfono Acudiente*</label>
+                                <input type="tel" class="form-control">
                             </div>
                         </div>
                     </div>
-                </form>
 
-                <!-- Botones -->
-                <div class="botones">
-                    <button>Cancelar</button>
-                    <button>Agregar</button>
-                </div>
+                    <!-- Botones -->
+                    <div class="botones mt-3">
+                        <button type="reset" class="">Cancelar</button>
+                        <button type="submit" class="">Agregar</button>
+                    </div>
+
+                </form>
 
             </div>
 
