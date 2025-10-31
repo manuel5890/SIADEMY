@@ -191,6 +191,19 @@
       font-weight: 700;
     }
 
+    .subtitulo {
+      font-size: 1.1rem;
+      padding: 0 100px 0 0;
+      background-color: #11193a;
+      border-radius: 20px;
+      margin: 30px 80px 30px 40px;
+    }
+
+    .subtitulo p {
+      padding: 20px 0 20px 20px;
+      border-radius: 0px;
+    }
+
     .search {
       margin-left: auto;
       width: min(400px, 35%);
@@ -544,7 +557,7 @@
       background-color: #11193a;
       color: #333;
       border-radius: 12px;
-      padding: 0 30px 10px 30px;
+      padding: 0 10px 20px 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
 
@@ -554,7 +567,9 @@
       color: #fff;
       padding: 12px 20px;
       border-radius: 10px 10px 0 0;
-      margin-bottom: 25px;
+      margin-left: -10px;
+      margin-right: -10px;
+
     }
 
     .tabla-titulo h5 {
@@ -568,6 +583,28 @@
       flex: 1;
       margin: 0;
       padding: 4px;
+    }
+
+    .poFoto {
+      padding: 0 40px;
+    }
+
+    .esPhoto {
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      transition: border-color 0.2s ease;
+      background-color: #101632;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .poFoto small {
+      color: white;
+      margin: 20px 0;
+    }
+
+    .poFoto input {
+      margin: 20px 0;
     }
 
     .foto {
@@ -596,6 +633,21 @@
       color: var(--card);
     }
 
+    form .selector {
+      width: 100% !important;
+      border: 1px solid #ccc !important;
+      border-radius: 6px !important;
+      padding: 10px 12px !important;
+      font-size: 0.95rem !important;
+      transition: border-color 0.2s ease !important;
+      background-color: #101632 !important;
+      color: var(--card) !important;
+    }
+
+    form .selector option {
+      background-color: var(--sidebar);
+    }
+
     form input:focus {
       border-color: #007bff;
       outline: none;
@@ -614,6 +666,13 @@
 
     .inpLuFe input {
       margin-left: 2px;
+    }
+
+    .step p {
+      color: var(--card);
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
     }
 
     /* ======= FOTO ======= */
@@ -669,18 +728,67 @@
     .botones button:first-child:hover {
       background-color: transparent;
       color: #fff;
-      border: 2px solid var(--accent);
+      border: 2px solid #007bff;
     }
 
     /* Botón agregar */
     .botones button:last-child {
-      background-color: var(--sidebar);
+      background-color: #007bff;
       color: var(--card);
     }
 
     .botones button:last-child:hover {
       background-color: var(--card);
       color: var(--sidebar);
+      border: 2px solid #007bff;
+    }
+
+    /* Wizard   Formulario*/
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    .botones button {
+      margin-right: 10px;
+    }
+
+    .wizard-progress {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .wizard-progress div {
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    .wizard-progress div::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -50%;
+      width: 100%;
+      height: 2px;
+      background-color: #ccc;
+      z-index: -1;
+    }
+
+    .wizard-progress div:last-child::after {
+      display: none;
+    }
+
+    .wizard-progress .active-step {
+      background-color: #0b1736;
+      padding: 10px 0;
+      border-radius: 20px;
+      font-weight: 600;
+      color: #0d6efd;
     }
 
     /* RESPONSIVE */
@@ -703,6 +811,10 @@
 
       .search {
         width: min(300px, 30%);
+      }
+
+      .esPhoto {
+        padding: 9px 10px;
       }
     }
 
@@ -736,6 +848,24 @@
         width: 100%
       }
 
+      .subtitulo {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .subtitulo p {
+        margin-right: 20px;
+      }
+
+      .poFoto {
+        padding: 0 20px;
+      }
+
+      .esPhoto {
+        padding: 9px 10px;
+      }
+
       .topbar {
         flex-wrap: wrap;
       }
@@ -744,6 +874,16 @@
     @media (max-width:600px) {
       .title {
         font-size: 26px
+      }
+
+      .subtitulo {
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .subtitulo p {
+        margin-right: 20px;
       }
 
       .btn-agregar-estudiante {
