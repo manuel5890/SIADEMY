@@ -31,7 +31,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 920px;
+    max-width: 1020px;
     background: var(--bg-2);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
     border-radius: 20px;
@@ -84,6 +84,15 @@ body {
     font-weight: 700;
 }
 
+form .selector {
+    width: 100% !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 0.95rem !important;
+    transition: border-color 0.2s ease !important;
+    color: var(--sidebar) !important;
+}
+
 .input-group {
     background: white;
     border-radius: 10px;
@@ -96,7 +105,7 @@ body {
 .input-group i {
     font-size: 20px;
     margin-right: 10px;
-
+    color: var(--brand);
 }
 
 .input-group input {
@@ -151,15 +160,18 @@ button:hover {
 
 /* Animación de rebote para el logo */
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-4px);
     }
 }
 
-.login-left > div:first-child {
+.login-left>div:first-child {
     animation: bounce 2s ease-in-out infinite;
 }
 
